@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: topup
+cbs:
+  db:
+    cassandra:
+      replication: 3
+      external:
+        dc: dc1
+        replication: 3
+      connection:
+        urls: "..........."
+        port: 9042
+        keyspace: vasp
+        dc: dc1
+RABBITMQ_HOST: localhost
+RABBITMQ_PORT: 5672
+RABBITMQ_USERNAME: admin
+RABBITMQ_PASSWORD: admin
+RABBITMQ_EXCHANGE_NAME: exchange
+RABBITMQ_QUEUE_TERMINATION: queue
+RABBITMQ_ROUTING_KEY_TERMINATION: key
+RABBITMQ_VIRTUAL_HOST: \
+logging:
+  file.name: logs/topup.log
+  pattern:
+    console: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+    file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
+  level:
+    org.springframework.web: ERROR
+    uz.coscom.topup: INFO
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,prometheus,metrics
+  metrics:
+    distribution:
+      percentiles-histogram:
+        "[http.server.requests]": true
+  prometheus:
+    metrics:
+      export:
+        enabled: true

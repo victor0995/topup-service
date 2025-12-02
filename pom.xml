@@ -71,7 +71,7 @@
         <dependency>
             <groupId>uz.cbssolutions</groupId>
             <artifactId>broker</artifactId>
-            <version>1.8.9</version>
+            <version>1.8.10</version>
         </dependency>
         <dependency>
             <groupId>uz.cbssolutions.commons.broker</groupId>
@@ -91,20 +91,25 @@
             <artifactId>reactor-test</artifactId>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <scope>provided</scope>
+        </dependency>
     </dependencies>
-    <repositories>
-        <repository>
-            <id>nexus</id>
-            <name>Nexus Repository</name>
-            <url>https://ucell-registry.local.domain/repository/maven-public/</url>
-            <snapshots>
-                <enabled>true</enabled>
-            </snapshots>
-            <releases>
-                <enabled>true</enabled>
-            </releases>
-        </repository>
-    </repositories>
+<!--    <repositories>-->
+<!--        <repository>-->
+<!--            <id>nexus</id>-->
+<!--            <name>Nexus Repository</name>-->
+<!--            <url>https://ucell-registry.local.domain/repository/maven-public/</url>-->
+<!--            <snapshots>-->
+<!--                <enabled>true</enabled>-->
+<!--            </snapshots>-->
+<!--            <releases>-->
+<!--                <enabled>true</enabled>-->
+<!--            </releases>-->
+<!--        </repository>-->
+<!--    </repositories>-->
     <build>
         <plugins>
             <plugin>

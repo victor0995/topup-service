@@ -1,11 +1,11 @@
-package uz.ucell.topupservice.service;
+package uz.ucell.topupservice.service.Impl;
 
 import lombok.AccessLevel;
 import lombok.experimental.FieldDefaults;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import uz.ucell.topupservice.dto.TopupRequest;
-import uz.ucell.topupservice.service.Impl.TopupServiceImpl;
+import uz.ucell.topupservice.service.TopupServiceImpl;
 
 
 @Slf4j

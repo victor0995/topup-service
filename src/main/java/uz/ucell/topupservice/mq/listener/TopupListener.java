@@ -6,7 +6,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.stereotype.Service;
 import uz.ucell.topupservice.dto.TopupRequest;
-import uz.ucell.topupservice.service.TopupService;
+import uz.ucell.topupservice.service.Impl.TopupService;
 
 
 @RequiredArgsConstructor

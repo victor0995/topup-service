@@ -1,4 +1,4 @@
-package uz.ucell.topupservice.service.Impl;
+package uz.ucell.topupservice.service;
 
 import uz.ucell.topupservice.dto.TopupRequest;
 

@@ -1,7 +1,25 @@
 spring:
+  data:
+    cassandra:
+      contactPoints: 127.0.0.1
+      port: 9042
+      keyspace: vasp
+      username: cassandra
+      password: cassandra
+      dc: datacenter1
+
+
+  main:
+    allow-bean-definition-overriding: true
   application:
     name: topup
 cbs:
+  broker:
+    url: ""
+    user: ""
+    password: ""
+    exchange-type: ""
+    exchange-type-alternative: ""
   db:
     cassandra:
       replication: 3
@@ -15,12 +33,12 @@ cbs:
         dc: dc1
 RABBITMQ_HOST: localhost
 RABBITMQ_PORT: 5672
-RABBITMQ_USERNAME: admin
-RABBITMQ_PASSWORD: admin
+RABBITMQ_USERNAME: guest
+RABBITMQ_PASSWORD: guest
 RABBITMQ_EXCHANGE_NAME: exchange
-RABBITMQ_QUEUE_TERMINATION: queue
-RABBITMQ_ROUTING_KEY_TERMINATION: key
-RABBITMQ_VIRTUAL_HOST: \
+RABBITMQ_QUEUE_TOPUP: billing.charge.queue
+RABBITMQ_ROUTING_KEY_TOPUP: billing.charge.queue
+RABBITMQ_VIRTUAL_HOST: /
 logging:
   file.name: logs/topup.log
   pattern:

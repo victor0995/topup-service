@@ -6,9 +6,7 @@ import lombok.experimental.FieldDefaults;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
 
-/**
- * TODO юзай его в TOPUP Config
- */
+
 @Data
 @Component
 @FieldDefaults(level = AccessLevel.PRIVATE)
@@ -27,8 +25,8 @@ public class RabbitMQProperties {
 
     @Value("${RABBITMQ_EXCHANGE_NAME}")
     String exchangeName;
-    @Value("${RABBITMQ_QUEUE_TERMINATION}")
-    String queueTermination;
-    @Value("${RABBITMQ_ROUTING_KEY_TERMINATION}")
-    String routingKeyTermination;
+    @Value("${RABBITMQ_QUEUE_TOPUP}")
+    String queueTopup;
+    @Value("${RABBITMQ_ROUTING_KEY_TOPUP}")
+    String routingKeyTopup;
 }

@@ -20,7 +20,7 @@ public class UserProlongation implements Serializable {
     @PrimaryKeyColumn(type = PrimaryKeyType.PARTITIONED,name = "msisdn",ordinal = 0)
     String msisdn;
 
-    @PrimaryKeyColumn(type = PrimaryKeyType.CLUSTERED,name = "content_provider_id",ordinal = 1)
+    @PrimaryKeyColumn(type = PrimaryKeyType.CLUSTERED,name = "service_id",ordinal = 1)
     Long serviceId;
 
     @Column("created_date")

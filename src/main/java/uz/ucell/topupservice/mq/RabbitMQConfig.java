@@ -18,8 +18,8 @@ public class RabbitMQConfig {
     private final RabbitMQProperties properties;
 
     @Bean
-    public Queue terminationService() {
-        return new Queue(properties.getQueueTermination(), false, false, true);
+    public Queue topupService() {
+        return new Queue(properties.getQueueTopup(), false, false, true);
     }
 
     @Bean
@@ -28,16 +28,14 @@ public class RabbitMQConfig {
     }
 
     @Bean
-    public Binding bindingTermination() {
+    public Binding bindingTopupService() {
         return BindingBuilder
-                .bind(terminationService())
+                .bind(topupService())
                 .to(exchange())
-                .with(properties.getRoutingKeyTermination());
+                .with(properties.getRoutingKeyTopup());
     }
 
-
     @Bean
-
     public MessageConverter messageConverter() {
         return new Jackson2JsonMessageConverter();
     }

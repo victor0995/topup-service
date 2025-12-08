@@ -4,7 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 
-@SpringBootApplication(scanBasePackages = {"uz.ucell"})
+@SpringBootApplication(scanBasePackages = {"uz.cbssolutions", "uz.ucell"})
 public class TopupServiceApplication {
 
     public static void main(String[] args) {

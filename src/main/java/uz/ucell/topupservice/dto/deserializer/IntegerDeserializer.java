@@ -17,7 +17,7 @@ public class IntegerDeserializer extends JsonDeserializer<Integer> {
             return Integer.valueOf(value.trim());
 
         } catch (Exception e) {
-            return null; // гарантированно не упадёт
+            return null;
         }
     }
 }

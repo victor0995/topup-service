@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import uz.ucell.topupservice.cassandra.CassandraProperties;
-import uz.ucell.topupservice.config.cbsBroker.CbsBrokerProperties;
 import uz.ucell.topupservice.mq.RabbitMQProperties;
 
 
@@ -16,10 +15,7 @@ public class TopupConfig {
 
     private final CassandraProperties cassandraProperties;
     private final RabbitMQProperties rabbitMQProperties;
-    private final CbsBrokerProperties cbsBrokerProperties;
-    /**
-     * TODO Исправь все эти переменные как в Cassandra Properties.
-     */
+
 
     @PostConstruct
     public void logConfig() {
@@ -41,13 +37,6 @@ public class TopupConfig {
                 rabbitMQProperties.getRoutingKeyTopup()
         );
         log.debug("RabbitMQ password: {}", mask(rabbitMQProperties.getPassword()));
-        log.info("CBS broker: url={}, user={}, exchangeType={}, exchangeTypeAlt={}",
-                cbsBrokerProperties.getCbsBrokerUrl(),
-                cbsBrokerProperties.getCbsBrokerUser(),
-                cbsBrokerProperties.getCbsBrokerExchangeType(),
-                cbsBrokerProperties.getCbsBrokerExchangeTypeAlternative()
-        );
-        log.debug("CBS broker password: {}", mask(cbsBrokerProperties.getCbsBrokerPassword()));
     }
 
     private String mask(String value) {

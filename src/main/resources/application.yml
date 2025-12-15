@@ -7,30 +7,15 @@ spring:
       username: cassandra
       password: cassandra
       dc: datacenter1
-
-
+  artemis:
+    broker-url: ${ARTEMIS_BROKER_URL:tcp://localhost:61616}
+    user: ${ARTEMIS_USERNAME:admin}
+    password: ${ARTEMIS_PASSWORD:admin}
+    mode: native
   main:
     allow-bean-definition-overriding: true
   application:
     name: topup
-cbs:
-  broker:
-    url: ""
-    user: ""
-    password: ""
-    exchange-type: ""
-    exchange-type-alternative: ""
-  db:
-    cassandra:
-      replication: 3
-      external:
-        dc: dc1
-        replication: 3
-      connection:
-        urls: "..........."
-        port: 9042
-        keyspace: vasp
-        dc: dc1
 RABBITMQ_HOST: localhost
 RABBITMQ_PORT: 5672
 RABBITMQ_USERNAME: guest
@@ -46,8 +31,7 @@ logging:
     file: "%d{yyyy-MM-dd HH:mm:ss} [%thread] %-5level %logger{36} - %msg%n"
   level:
     org.springframework.web: ERROR
-    uz.coscom.topup: INFO
-
+    uz.ucell.topup: INFO
 management:
   endpoints:
     web:

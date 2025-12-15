@@ -1,39 +1,40 @@
-2025-12-05 09:50:59 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 20980 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
-2025-12-05 09:50:59 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-12-05 09:51:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
-2025-12-05 09:51:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Cassandra repository interfaces.
-2025-12-05 09:51:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
-2025-12-05 09:51:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 12 ms. Found 0 Reactive Cassandra repository interfaces.
-2025-12-05 09:51:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
-2025-12-05 09:51:00 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 3 ms. Found 0 Cassandra repository interfaces.
-2025-12-05 09:51:01 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-05 09:51:01 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-05 09:51:01 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-12-05 09:51:01 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-12-05 09:51:01 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1533 ms
-2025-12-05 09:51:01 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
-2025-12-05 09:51:01 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
-2025-12-05 09:51:01 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
-2025-12-05 09:51:01 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
-2025-12-05 09:51:01 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
-2025-12-05 09:51:02 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
-2025-12-05 09:51:02 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
-2025-12-05 09:51:02 [s0-admin-1] WARN  c.d.o.d.i.c.c.ControlConnection - [s0] Error connecting to Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=47f0d9b5), trying next node (ConnectionInitException: [s0|control|id: 0x08caee82, L:/127.0.0.1:65087 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer))
-2025-12-05 09:51:04 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=47f0d9b5): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x08caee82, L:/127.0.0.1:65087 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
-2025-12-05 09:51:04 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-12-05 09:51:04 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+2025-12-11 00:08:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-12-11 00:08:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2025-12-11 00:08:38 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 27844 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 00:08:38 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 00:08:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:08:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 6 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 00:08:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 00:08:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 155 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 00:08:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:08:39 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 24 ms. Found 3 Cassandra repository interfaces.
+2025-12-11 00:08:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 00:08:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 00:08:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 00:08:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 00:08:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1817 ms
+2025-12-11 00:08:40 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 00:08:40 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 00:08:40 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 00:08:40 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
+2025-12-11 00:08:40 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topupListener' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\mq\listener\TopupListener.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'topupServiceImpl' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\service\Impl\TopupServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'myJmsTemplate' defined in class path resource [uz/ucell/topupservice/config/JmsConfiguration.class]: Unsatisfied dependency expressed through method 'myJmsTemplate' parameter 0: Error creating bean with name 'jmsConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/jms/artemis/ArtemisConnectionFactoryConfiguration$SimpleConnectionFactoryConfiguration$CachingConnectionFactoryConfiguration.class]: Failed to instantiate [org.springframework.jms.connection.CachingConnectionFactory]: Factory method 'cachingJmsConnectionFactory' threw exception with message: Unable to create ActiveMQConnectionFactory
+2025-12-11 00:08:40 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-12-11 00:08:40 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
 
 Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-12-05 09:51:04 [main] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=47f0d9b5): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x08caee82, L:/127.0.0.1:65087 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+2025-12-11 00:08:40 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topupListener' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\mq\listener\TopupListener.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'topupServiceImpl' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\service\Impl\TopupServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'myJmsTemplate' defined in class path resource [uz/ucell/topupservice/config/JmsConfiguration.class]: Unsatisfied dependency expressed through method 'myJmsTemplate' parameter 0: Error creating bean with name 'jmsConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/jms/artemis/ArtemisConnectionFactoryConfiguration$SimpleConnectionFactoryConfiguration$CachingConnectionFactoryConfiguration.class]: Failed to instantiate [org.springframework.jms.connection.CachingConnectionFactory]: Factory method 'cachingJmsConnectionFactory' threw exception with message: Unable to create ActiveMQConnectionFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
 	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
 	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:969)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
 	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
 	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
 	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
@@ -43,7 +44,434 @@ org.springframework.beans.factory.BeanCreationException: Error creating bean wit
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
 	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
 	at uz.ucell.topupservice.TopupServiceApplication.main(TopupServiceApplication.java:11)
-Caused by: com.datastax.oss.driver.api.core.AllNodesFailedException: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=47f0d9b5): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x08caee82, L:/127.0.0.1:65087 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topupServiceImpl' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\service\Impl\TopupServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'myJmsTemplate' defined in class path resource [uz/ucell/topupservice/config/JmsConfiguration.class]: Unsatisfied dependency expressed through method 'myJmsTemplate' parameter 0: Error creating bean with name 'jmsConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/jms/artemis/ArtemisConnectionFactoryConfiguration$SimpleConnectionFactoryConfiguration$CachingConnectionFactoryConfiguration.class]: Failed to instantiate [org.springframework.jms.connection.CachingConnectionFactory]: Factory method 'cachingJmsConnectionFactory' threw exception with message: Unable to create ActiveMQConnectionFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'myJmsTemplate' defined in class path resource [uz/ucell/topupservice/config/JmsConfiguration.class]: Unsatisfied dependency expressed through method 'myJmsTemplate' parameter 0: Error creating bean with name 'jmsConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/jms/artemis/ArtemisConnectionFactoryConfiguration$SimpleConnectionFactoryConfiguration$CachingConnectionFactoryConfiguration.class]: Failed to instantiate [org.springframework.jms.connection.CachingConnectionFactory]: Factory method 'cachingJmsConnectionFactory' threw exception with message: Unable to create ActiveMQConnectionFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'jmsConnectionFactory' defined in class path resource [org/springframework/boot/autoconfigure/jms/artemis/ArtemisConnectionFactoryConfiguration$SimpleConnectionFactoryConfiguration$CachingConnectionFactoryConfiguration.class]: Failed to instantiate [org.springframework.jms.connection.CachingConnectionFactory]: Factory method 'cachingJmsConnectionFactory' threw exception with message: Unable to create ActiveMQConnectionFactory
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:636)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.jms.connection.CachingConnectionFactory]: Factory method 'cachingJmsConnectionFactory' threw exception with message: Unable to create ActiveMQConnectionFactory
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 61 common frames omitted
+Caused by: java.lang.IllegalStateException: Unable to create ActiveMQConnectionFactory
+	at org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryFactory.createConnectionFactory(ArtemisConnectionFactoryFactory.java:65)
+	at org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryConfiguration$SimpleConnectionFactoryConfiguration.createJmsConnectionFactory(ArtemisConnectionFactoryConfiguration.java:59)
+	at org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryConfiguration$SimpleConnectionFactoryConfiguration$CachingConnectionFactoryConfiguration.cachingJmsConnectionFactory(ArtemisConnectionFactoryConfiguration.java:73)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 62 common frames omitted
+Caused by: java.lang.reflect.InvocationTargetException: null
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:500)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:481)
+	at org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryFactory.newNativeConnectionFactory(ArtemisConnectionFactoryFactory.java:142)
+	at org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryFactory.createNativeConnectionFactory(ArtemisConnectionFactoryFactory.java:129)
+	at org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryFactory.doCreateConnectionFactory(ArtemisConnectionFactoryFactory.java:90)
+	at org.springframework.boot.autoconfigure.jms.artemis.ArtemisConnectionFactoryFactory.createConnectionFactory(ArtemisConnectionFactoryFactory.java:62)
+	... 69 common frames omitted
+Caused by: java.lang.IllegalStateException: java.lang.RuntimeException: java.lang.NullPointerException: Schema http not found
+	at org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory.<init>(ActiveMQConnectionFactory.java:218)
+	... 78 common frames omitted
+Caused by: java.lang.RuntimeException: java.lang.NullPointerException: Schema http not found
+	at org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory.setBrokerURL(ActiveMQConnectionFactory.java:239)
+	at org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory.<init>(ActiveMQConnectionFactory.java:216)
+	... 78 common frames omitted
+Caused by: java.lang.RuntimeException: java.lang.NullPointerException: Schema http not found
+	at org.apache.activemq.artemis.core.client.impl.ServerLocatorImpl.newLocator(ServerLocatorImpl.java:356)
+	at org.apache.activemq.artemis.jms.client.ActiveMQConnectionFactory.setBrokerURL(ActiveMQConnectionFactory.java:236)
+	... 79 common frames omitted
+Caused by: java.lang.NullPointerException: Schema http not found
+	at org.apache.activemq.artemis.utils.uri.URIFactory.newObject(URIFactory.java:56)
+	at org.apache.activemq.artemis.core.client.impl.ServerLocatorImpl.newLocator(ServerLocatorImpl.java:354)
+	... 80 common frames omitted
+2025-12-11 00:09:01 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 25000 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 00:09:01 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 00:09:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:09:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 7 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 00:09:01 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 00:09:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 87 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 00:09:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:09:02 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19 ms. Found 3 Cassandra repository interfaces.
+2025-12-11 00:09:02 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 00:09:02 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 00:09:02 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 00:09:02 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 00:09:02 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1445 ms
+2025-12-11 00:09:02 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 00:09:02 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 00:09:02 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 00:09:02 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
+2025-12-11 00:09:03 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 00:09:03 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:09:03 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:09:03 [s0-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:09:03 [s0-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:09:03 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:09:03 [s1-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:09:03 [s1-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:09:03 [s1-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:09:04 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-11 00:09:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-12-11 00:09:04 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost]
+2025-12-11 00:09:04 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#74450c9b:0/SimpleConnection@1d7af82 [delegate=amqp://guest@127.0.0.1:5672/, localPort=55863]
+2025-12-11 00:09:04 [main] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (billing.charge.queue) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-12-11 00:09:04 [main] INFO  u.u.t.TopupServiceApplication - Started TopupServiceApplication in 4.284 seconds (process running for 4.869)
+2025-12-11 00:09:05 [RMI TCP Connection(3)-26.121.24.245] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 00:10:08 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] WARN  u.u.t.service.Impl.TopupServiceImpl - Topup request without msisdn: TopupRequest(msisdn=, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=998930041717, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 00:10:49 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] WARN  u.u.t.service.Impl.TopupServiceImpl - Topup request without msisdn: TopupRequest(msisdn=, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=998930041717, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 00:11:31 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] WARN  u.u.t.service.Impl.TopupServiceImpl - Topup request without msisdn: TopupRequest(msisdn=, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=998930041717, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 00:11:52 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=998930041717, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 00:11:52 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Skip topup for msisdn=998930041717 due to quiet time (23:00-04:00)
+2025-12-11 00:12:23 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-12-11 00:12:24 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2025-12-11 00:12:32 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 26908 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 00:12:32 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 00:12:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:12:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 00:12:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 00:12:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 105 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 00:12:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:12:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18 ms. Found 3 Cassandra repository interfaces.
+2025-12-11 00:12:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 00:12:33 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 00:12:33 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 00:12:33 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 00:12:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1180 ms
+2025-12-11 00:12:33 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 00:12:33 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 00:12:33 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 00:12:33 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
+2025-12-11 00:12:34 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 00:12:34 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:12:34 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:12:34 [s0-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:12:34 [s0-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:12:34 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:12:34 [s1-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:12:34 [s1-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:12:34 [s1-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:12:35 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-11 00:12:35 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-12-11 00:12:35 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost]
+2025-12-11 00:12:35 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#745cf754:0/SimpleConnection@2fd8b081 [delegate=amqp://guest@127.0.0.1:5672/, localPort=63839]
+2025-12-11 00:12:35 [main] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (billing.charge.queue) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-12-11 00:12:35 [main] INFO  u.u.t.TopupServiceApplication - Started TopupServiceApplication in 3.771 seconds (process running for 4.31)
+2025-12-11 00:12:36 [RMI TCP Connection(3)-26.121.24.245] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 00:13:03 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 00:13:03 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Skip topup for msisdn=998930041717 due to quiet time (23:00-04:00)
+2025-12-11 00:13:24 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 00:13:24 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Skip topup for msisdn=998930041717 due to quiet time (23:00-04:00)
+2025-12-11 00:14:59 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-12-11 00:15:00 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2025-12-11 00:15:09 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 18984 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 00:15:09 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 00:15:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:15:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 00:15:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 00:15:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 145 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 00:15:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:15:10 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 23 ms. Found 3 Cassandra repository interfaces.
+2025-12-11 00:15:11 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 00:15:11 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 00:15:11 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 00:15:11 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 00:15:11 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1643 ms
+2025-12-11 00:15:11 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 00:15:11 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 00:15:11 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 00:15:11 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
+2025-12-11 00:15:12 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 00:15:12 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:15:13 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:15:13 [s0-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:15:14 [s0-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:15:14 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:15:14 [s1-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:15:14 [s1-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:15:14 [s1-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:15:16 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-11 00:15:16 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-12-11 00:15:16 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost]
+2025-12-11 00:15:16 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#4b99648a:0/SimpleConnection@6b6606d1 [delegate=amqp://guest@127.0.0.1:5672/, localPort=52432]
+2025-12-11 00:15:16 [main] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (billing.charge.queue) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-12-11 00:15:16 [main] INFO  u.u.t.TopupServiceApplication - Started TopupServiceApplication in 7.365 seconds (process running for 8.055)
+2025-12-11 00:15:17 [RMI TCP Connection(1)-26.121.24.245] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 00:15:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 00:15:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Skip topup for msisdn=998930041717 due to quiet time (23:00-04:00)
+2025-12-11 00:16:45 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-12-11 00:16:45 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2025-12-11 00:16:56 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 20888 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 00:16:56 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 00:16:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:16:57 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 00:16:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 00:16:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 169 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 00:16:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:16:58 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 39 ms. Found 3 Cassandra repository interfaces.
+2025-12-11 00:16:59 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 00:16:59 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 00:16:59 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 00:16:59 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 00:16:59 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2478 ms
+2025-12-11 00:16:59 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 00:16:59 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 00:16:59 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 00:16:59 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
+2025-12-11 00:17:00 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 00:17:00 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:17:01 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:17:01 [s0-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:17:01 [s0-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:17:02 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:17:02 [s1-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:17:02 [s1-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:17:02 [s1-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:17:04 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-11 00:17:04 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-12-11 00:17:04 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost]
+2025-12-11 00:17:04 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#5d2e65bd:0/SimpleConnection@27605b87 [delegate=amqp://guest@127.0.0.1:5672/, localPort=58392]
+2025-12-11 00:17:04 [main] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (billing.charge.queue) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-12-11 00:17:04 [main] INFO  u.u.t.TopupServiceApplication - Started TopupServiceApplication in 8.578 seconds (process running for 9.62)
+2025-12-11 00:17:05 [RMI TCP Connection(5)-26.121.24.245] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 00:17:21 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 00:17:22 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 37000
+2025-12-11 00:17:22 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810001, id=27438785-4806-4a0f-8d86-7e12d0118531, amount=37000]
+2025-12-11 00:17:22 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Finished TOPUP for msisdn=998930041717
+2025-12-11 00:19:10 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-12-11 00:19:11 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2025-12-11 00:19:19 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 9856 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 00:19:19 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 00:19:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:19:19 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 5 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 00:19:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 00:19:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 99 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 00:19:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 00:19:20 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 3 Cassandra repository interfaces.
+2025-12-11 00:19:20 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 00:19:20 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 00:19:20 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 00:19:20 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 00:19:20 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1181 ms
+2025-12-11 00:19:20 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 00:19:20 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 00:19:20 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 00:19:20 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
+2025-12-11 00:19:21 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 00:19:21 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:19:21 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:19:21 [s0-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:19:21 [s0-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:19:21 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 00:19:21 [s1-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 00:19:21 [s1-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:19:21 [s1-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 00:19:22 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-11 00:19:22 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-12-11 00:19:22 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost]
+2025-12-11 00:19:22 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#5d2e65bd:0/SimpleConnection@27605b87 [delegate=amqp://guest@127.0.0.1:5672/, localPort=57794]
+2025-12-11 00:19:22 [main] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (billing.charge.queue) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-12-11 00:19:22 [main] INFO  u.u.t.TopupServiceApplication - Started TopupServiceApplication in 3.719 seconds (process running for 4.295)
+2025-12-11 00:19:23 [RMI TCP Connection(4)-26.121.24.245] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 00:19:31 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 00:19:31 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 37000
+2025-12-11 00:19:31 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810001, id=cf27d802-0839-422a-92b7-1a066b091623, amount=37000]
+2025-12-11 00:19:31 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Finished TOPUP for msisdn=998930041717
+2025-12-11 00:28:24 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-12-11 10:03:35 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 12324 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 10:03:35 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 10:03:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:03:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 10:03:35 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 10:03:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 136 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 10:03:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:03:36 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 17 ms. Found 4 Cassandra repository interfaces.
+2025-12-11 10:03:36 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 10:03:36 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 10:03:36 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 10:03:36 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 10:03:36 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1314 ms
+2025-12-11 10:03:36 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 10:03:36 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 10:03:36 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 10:03:36 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
+2025-12-11 10:03:37 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 10:03:37 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 10:03:37 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 10:03:37 [s0-admin-1] WARN  c.d.o.d.i.c.c.ControlConnection - [s0] Error connecting to Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=57a3bcfb), trying next node (ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (io.netty.channel.StacklessClosedChannelException))
+2025-12-11 10:03:39 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topupListener' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\mq\listener\TopupListener.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'topupServiceImpl' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\service\Impl\TopupServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userProlongationRepository' defined in uz.ucell.topupservice.repository.UserProlongationRepository defined in @EnableCassandraRepositories declared on CassandraRepositoriesRegistrar.EnableCassandraRepositoriesConfiguration: Cannot resolve reference to bean 'cassandraTemplate' while setting bean property 'cassandraTemplate'
+2025-12-11 10:03:39 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-12-11 10:03:39 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-11 10:03:39 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topupListener' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\mq\listener\TopupListener.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'topupServiceImpl' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\service\Impl\TopupServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userProlongationRepository' defined in uz.ucell.topupservice.repository.UserProlongationRepository defined in @EnableCassandraRepositories declared on CassandraRepositoriesRegistrar.EnableCassandraRepositoriesConfiguration: Cannot resolve reference to bean 'cassandraTemplate' while setting bean property 'cassandraTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at uz.ucell.topupservice.TopupServiceApplication.main(TopupServiceApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topupServiceImpl' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\service\Impl\TopupServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userProlongationRepository' defined in uz.ucell.topupservice.repository.UserProlongationRepository defined in @EnableCassandraRepositories declared on CassandraRepositoriesRegistrar.EnableCassandraRepositoriesConfiguration: Cannot resolve reference to bean 'cassandraTemplate' while setting bean property 'cassandraTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userProlongationRepository' defined in uz.ucell.topupservice.repository.UserProlongationRepository defined in @EnableCassandraRepositories declared on CassandraRepositoriesRegistrar.EnableCassandraRepositoriesConfiguration: Cannot resolve reference to bean 'cassandraTemplate' while setting bean property 'cassandraTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1685)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraTemplate' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Failed to instantiate [org.springframework.data.cassandra.core.CassandraAdminTemplate]: Factory method 'cassandraTemplate' threw exception with message: Error creating bean with name 'cassandraSessionFactory' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Unsatisfied dependency expressed through method 'cassandraSessionFactory' parameter 0: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=57a3bcfb): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (io.netty.channel.StacklessClosedChannelException)]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.cassandra.core.CassandraAdminTemplate]: Factory method 'cassandraTemplate' threw exception with message: Error creating bean with name 'cassandraSessionFactory' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Unsatisfied dependency expressed through method 'cassandraSessionFactory' parameter 0: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=57a3bcfb): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (io.netty.channel.StacklessClosedChannelException)]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cassandraSessionFactory' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Unsatisfied dependency expressed through method 'cassandraSessionFactory' parameter 0: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=57a3bcfb): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (io.netty.channel.StacklessClosedChannelException)]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1323)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:341)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:334)
+	at org.springframework.data.cassandra.config.AbstractSessionConfiguration.requireBeanOfType(AbstractSessionConfiguration.java:103)
+	at org.springframework.data.cassandra.config.AbstractCassandraConfiguration.getRequiredSessionFactory(AbstractCassandraConfiguration.java:240)
+	at org.springframework.data.cassandra.config.AbstractCassandraConfiguration.cassandraTemplate(AbstractCassandraConfiguration.java:166)
+	at uz.ucell.topupservice.cassandra.CassandraConfiguration$$SpringCGLIB$$0.CGLIB$cassandraTemplate$8(<generated>)
+	at uz.ucell.topupservice.cassandra.CassandraConfiguration$$SpringCGLIB$$FastClass$$0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at uz.ucell.topupservice.cassandra.CassandraConfiguration$$SpringCGLIB$$0.cassandraTemplate(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 58 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=57a3bcfb): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (io.netty.channel.StacklessClosedChannelException)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 85 common frames omitted
+Caused by: com.datastax.oss.driver.api.core.AllNodesFailedException: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=57a3bcfb): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (io.netty.channel.StacklessClosedChannelException)]
 	at com.datastax.oss.driver.api.core.AllNodesFailedException.copy(AllNodesFailedException.java:141)
 	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
 	at com.datastax.oss.driver.api.core.session.SessionBuilder.build(SessionBuilder.java:835)
@@ -51,8 +479,207 @@ Caused by: com.datastax.oss.driver.api.core.AllNodesFailedException: Could not r
 	at org.springframework.data.cassandra.config.CqlSessionFactoryBean.afterPropertiesSet(CqlSessionFactoryBean.java:469)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
 	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
-	... 16 common frames omitted
-	Suppressed: com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x08caee82, L:/127.0.0.1:65087 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)
+	... 96 common frames omitted
+	Suppressed: com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|connecting...] Protocol initialization request, step 1 (OPTIONS): failed to send request (io.netty.channel.StacklessClosedChannelException)
+		at com.datastax.oss.driver.internal.core.channel.ProtocolInitHandler$InitRequest.fail(ProtocolInitHandler.java:356)
+		at com.datastax.oss.driver.internal.core.channel.ChannelHandlerRequest.writeListener(ChannelHandlerRequest.java:87)
+		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:557)
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+		at io.netty.util.concurrent.DefaultPromise.addListener(DefaultPromise.java:185)
+		at io.netty.channel.DefaultChannelPromise.addListener(DefaultChannelPromise.java:95)
+		at io.netty.channel.DefaultChannelPromise.addListener(DefaultChannelPromise.java:30)
+		at com.datastax.oss.driver.internal.core.channel.ChannelHandlerRequest.send(ChannelHandlerRequest.java:76)
+		at com.datastax.oss.driver.internal.core.channel.ProtocolInitHandler$InitRequest.send(ProtocolInitHandler.java:193)
+		at com.datastax.oss.driver.internal.core.channel.ProtocolInitHandler.onRealConnect(ProtocolInitHandler.java:124)
+		at com.datastax.oss.driver.internal.core.channel.ConnectInitHandler.lambda$connect$0(ConnectInitHandler.java:57)
+		at io.netty.util.concurrent.DefaultPromise.notifyListener0(DefaultPromise.java:590)
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners0(DefaultPromise.java:583)
+		at io.netty.util.concurrent.DefaultPromise.notifyListenersNow(DefaultPromise.java:559)
+		at io.netty.util.concurrent.DefaultPromise.notifyListeners(DefaultPromise.java:492)
+		at io.netty.util.concurrent.DefaultPromise.setValue0(DefaultPromise.java:636)
+		at io.netty.util.concurrent.DefaultPromise.setFailure0(DefaultPromise.java:629)
+		at io.netty.util.concurrent.DefaultPromise.tryFailure(DefaultPromise.java:118)
+		at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.fulfillConnectPromise(AbstractNioChannel.java:326)
+		at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:342)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+		at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+		Suppressed: io.netty.channel.AbstractChannel$AnnotatedConnectException: Connection refused: getsockopt: /127.0.0.1:9042
+		Caused by: java.net.ConnectException: Connection refused: getsockopt
+			at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+			at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:672)
+			at java.base/sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:946)
+			at io.netty.channel.socket.nio.NioSocketChannel.doFinishConnect(NioSocketChannel.java:337)
+			at io.netty.channel.nio.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:339)
+			at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:776)
+			at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:724)
+			at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:650)
+			at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:562)
+			at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
+			at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+			at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+			at java.base/java.lang.Thread.run(Thread.java:840)
+	Caused by: io.netty.channel.StacklessClosedChannelException: null
+		at io.netty.channel.AbstractChannel$AbstractUnsafe.flush0()(Unknown Source)
+2025-12-11 10:04:32 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 23880 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 10:04:32 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 10:04:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:04:32 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 10:04:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 10:04:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 91 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 10:04:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:04:33 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 4 Cassandra repository interfaces.
+2025-12-11 10:04:33 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 10:04:33 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 10:04:33 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 10:04:33 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 10:04:33 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1183 ms
+2025-12-11 10:04:33 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 10:04:33 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 10:04:33 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 10:04:33 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
+2025-12-11 10:04:33 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 10:04:34 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 10:04:34 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 10:04:34 [s0-admin-1] WARN  c.d.o.d.i.c.c.ControlConnection - [s0] Error connecting to Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=68333859), trying next node (ConnectionInitException: [s0|control|id: 0x006e8add, L:/127.0.0.1:62160 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer))
+2025-12-11 10:04:36 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topupListener' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\mq\listener\TopupListener.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'topupServiceImpl' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\service\Impl\TopupServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userProlongationRepository' defined in uz.ucell.topupservice.repository.UserProlongationRepository defined in @EnableCassandraRepositories declared on CassandraRepositoriesRegistrar.EnableCassandraRepositoriesConfiguration: Cannot resolve reference to bean 'cassandraTemplate' while setting bean property 'cassandraTemplate'
+2025-12-11 10:04:36 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
+2025-12-11 10:04:36 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-12-11 10:04:36 [main] ERROR o.s.boot.SpringApplication - Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topupListener' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\mq\listener\TopupListener.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'topupServiceImpl' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\service\Impl\TopupServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userProlongationRepository' defined in uz.ucell.topupservice.repository.UserProlongationRepository defined in @EnableCassandraRepositories declared on CassandraRepositoriesRegistrar.EnableCassandraRepositoriesConfiguration: Cannot resolve reference to bean 'cassandraTemplate' while setting bean property 'cassandraTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:975)
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
+	at uz.ucell.topupservice.TopupServiceApplication.main(TopupServiceApplication.java:11)
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'topupServiceImpl' defined in file [C:\Users\pakvi\Desktop\work\work\topup-service\target\classes\uz\ucell\topupservice\service\Impl\TopupServiceImpl.class]: Unsatisfied dependency expressed through constructor parameter 1: Error creating bean with name 'userProlongationRepository' defined in uz.ucell.topupservice.repository.UserProlongationRepository defined in @EnableCassandraRepositories declared on CassandraRepositoriesRegistrar.EnableCassandraRepositoriesConfiguration: Cannot resolve reference to bean 'cassandraTemplate' while setting bean property 'cassandraTemplate'
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:237)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1355)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1192)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 19 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'userProlongationRepository' defined in uz.ucell.topupservice.repository.UserProlongationRepository defined in @EnableCassandraRepositories declared on CassandraRepositoriesRegistrar.EnableCassandraRepositoriesConfiguration: Cannot resolve reference to bean 'cassandraTemplate' while setting bean property 'cassandraTemplate'
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:377)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveValueIfNecessary(BeanDefinitionValueResolver.java:135)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.applyPropertyValues(AbstractAutowireCapableBeanFactory.java:1685)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1434)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:599)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 33 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraTemplate' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Failed to instantiate [org.springframework.data.cassandra.core.CassandraAdminTemplate]: Factory method 'cassandraTemplate' threw exception with message: Error creating bean with name 'cassandraSessionFactory' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Unsatisfied dependency expressed through method 'cassandraSessionFactory' parameter 0: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=68333859): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x006e8add, L:/127.0.0.1:62160 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:648)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:485)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.support.BeanDefinitionValueResolver.resolveReference(BeanDefinitionValueResolver.java:365)
+	... 47 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.cassandra.core.CassandraAdminTemplate]: Factory method 'cassandraTemplate' threw exception with message: Error creating bean with name 'cassandraSessionFactory' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Unsatisfied dependency expressed through method 'cassandraSessionFactory' parameter 0: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=68333859): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x006e8add, L:/127.0.0.1:62160 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:177)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:644)
+	... 57 common frames omitted
+Caused by: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'cassandraSessionFactory' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Unsatisfied dependency expressed through method 'cassandraSessionFactory' parameter 0: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=68333859): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x006e8add, L:/127.0.0.1:62160 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:795)
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:542)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1335)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1165)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:562)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:225)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1323)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveNamedBean(DefaultListableBeanFactory.java:1284)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveBean(DefaultListableBeanFactory.java:486)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:341)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.getBean(DefaultListableBeanFactory.java:334)
+	at org.springframework.data.cassandra.config.AbstractSessionConfiguration.requireBeanOfType(AbstractSessionConfiguration.java:103)
+	at org.springframework.data.cassandra.config.AbstractCassandraConfiguration.getRequiredSessionFactory(AbstractCassandraConfiguration.java:240)
+	at org.springframework.data.cassandra.config.AbstractCassandraConfiguration.cassandraTemplate(AbstractCassandraConfiguration.java:166)
+	at uz.ucell.topupservice.cassandra.CassandraConfiguration$$SpringCGLIB$$0.CGLIB$cassandraTemplate$8(<generated>)
+	at uz.ucell.topupservice.cassandra.CassandraConfiguration$$SpringCGLIB$$FastClass$$0.invoke(<generated>)
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258)
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:331)
+	at uz.ucell.topupservice.cassandra.CassandraConfiguration$$SpringCGLIB$$0.cassandraTemplate(<generated>)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:140)
+	... 58 common frames omitted
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=68333859): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x006e8add, L:/127.0.0.1:62160 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1443)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1353)
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:904)
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:782)
+	... 85 common frames omitted
+Caused by: com.datastax.oss.driver.api.core.AllNodesFailedException: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=68333859): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x006e8add, L:/127.0.0.1:62160 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
+	at com.datastax.oss.driver.api.core.AllNodesFailedException.copy(AllNodesFailedException.java:141)
+	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
+	at com.datastax.oss.driver.api.core.session.SessionBuilder.build(SessionBuilder.java:835)
+	at org.springframework.data.cassandra.config.CqlSessionFactoryBean.buildSystemSession(CqlSessionFactoryBean.java:535)
+	at org.springframework.data.cassandra.config.CqlSessionFactoryBean.afterPropertiesSet(CqlSessionFactoryBean.java:469)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
+	... 96 common frames omitted
+	Suppressed: com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x006e8add, L:/127.0.0.1:62160 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)
 		at com.datastax.oss.driver.internal.core.channel.ProtocolInitHandler$InitRequest.fail(ProtocolInitHandler.java:356)
 		at com.datastax.oss.driver.internal.core.channel.ChannelHandlerRequest.onFailure(ChannelHandlerRequest.java:104)
 		at com.datastax.oss.driver.internal.core.channel.InFlightHandler.fail(InFlightHandler.java:381)
@@ -81,121 +708,170 @@ Caused by: com.datastax.oss.driver.api.core.AllNodesFailedException: Could not r
 		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
 		at java.base/java.lang.Thread.run(Thread.java:840)
 	Caused by: com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer
-2025-12-05 09:51:14 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 27616 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
-2025-12-05 09:51:14 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-12-05 09:51:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
-2025-12-05 09:51:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Cassandra repository interfaces.
-2025-12-05 09:51:14 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
-2025-12-05 09:51:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 10 ms. Found 0 Reactive Cassandra repository interfaces.
-2025-12-05 09:51:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
-2025-12-05 09:51:15 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 2 ms. Found 0 Cassandra repository interfaces.
-2025-12-05 09:51:15 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-05 09:51:15 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-05 09:51:15 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-12-05 09:51:15 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-12-05 09:51:15 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 985 ms
-2025-12-05 09:51:15 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
-2025-12-05 09:51:15 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
-2025-12-05 09:51:15 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
-2025-12-05 09:51:15 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
-2025-12-05 09:51:15 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
-2025-12-05 09:51:15 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
-2025-12-05 09:51:16 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
-2025-12-05 09:51:16 [s0-admin-1] WARN  c.d.o.d.i.c.c.ControlConnection - [s0] Error connecting to Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=2f5a5795), trying next node (ConnectionInitException: [s0|control|id: 0x9529c293, L:/127.0.0.1:65100 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer))
-2025-12-05 09:51:18 [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=2f5a5795): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x9529c293, L:/127.0.0.1:65100 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
-2025-12-05 09:51:18 [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2025-12-05 09:51:18 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLogger - 
-
-Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
-2025-12-05 09:51:18 [main] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'cassandraSession' defined in class path resource [uz/ucell/topupservice/cassandra/CassandraConfiguration.class]: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=2f5a5795): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x9529c293, L:/127.0.0.1:65100 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1786)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:600)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:522)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:326)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:324)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:200)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:969)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:962)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:624)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:754)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:456)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:334)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1343)
-	at uz.ucell.topupservice.TopupServiceApplication.main(TopupServiceApplication.java:11)
-Caused by: com.datastax.oss.driver.api.core.AllNodesFailedException: Could not reach any contact point, make sure you've provided valid addresses (showing first 1 nodes, use getAllErrors() for more): Node(endPoint=127.0.0.1/<unresolved>:9042, hostId=null, hashCode=2f5a5795): [com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x9529c293, L:/127.0.0.1:65100 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)]
-	at com.datastax.oss.driver.api.core.AllNodesFailedException.copy(AllNodesFailedException.java:141)
-	at com.datastax.oss.driver.internal.core.util.concurrent.CompletableFutures.getUninterruptibly(CompletableFutures.java:149)
-	at com.datastax.oss.driver.api.core.session.SessionBuilder.build(SessionBuilder.java:835)
-	at org.springframework.data.cassandra.config.CqlSessionFactoryBean.buildSystemSession(CqlSessionFactoryBean.java:535)
-	at org.springframework.data.cassandra.config.CqlSessionFactoryBean.afterPropertiesSet(CqlSessionFactoryBean.java:469)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1833)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1782)
-	... 16 common frames omitted
-	Suppressed: com.datastax.oss.driver.api.core.connection.ConnectionInitException: [s0|control|id: 0x9529c293, L:/127.0.0.1:65100 - R:/127.0.0.1:9042] Protocol initialization request, step 1 (OPTIONS): unexpected failure (com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer)
-		at com.datastax.oss.driver.internal.core.channel.ProtocolInitHandler$InitRequest.fail(ProtocolInitHandler.java:356)
-		at com.datastax.oss.driver.internal.core.channel.ChannelHandlerRequest.onFailure(ChannelHandlerRequest.java:104)
-		at com.datastax.oss.driver.internal.core.channel.InFlightHandler.fail(InFlightHandler.java:381)
-		at com.datastax.oss.driver.internal.core.channel.InFlightHandler.abortAllInFlight(InFlightHandler.java:371)
-		at com.datastax.oss.driver.internal.core.channel.InFlightHandler.abortAllInFlight(InFlightHandler.java:353)
-		at com.datastax.oss.driver.internal.core.channel.InFlightHandler.channelInactive(InFlightHandler.java:331)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274)
-		at io.netty.handler.codec.ByteToMessageDecoder.channelInputClosed(ByteToMessageDecoder.java:412)
-		at io.netty.handler.codec.ByteToMessageDecoder.channelInactive(ByteToMessageDecoder.java:377)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
-		at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274)
-		at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1405)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301)
-		at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
-		at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:901)
-		at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:813)
-		at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
-		at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
-		at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:470)
-		at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:566)
-		at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:997)
-		at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-		at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-		at java.base/java.lang.Thread.run(Thread.java:840)
-	Caused by: com.datastax.oss.driver.api.core.connection.ClosedConnectionException: Lost connection to remote peer
-2025-12-05 09:51:40 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 14216 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
-2025-12-05 09:51:40 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
-2025-12-05 09:51:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
-2025-12-05 09:51:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Cassandra repository interfaces.
-2025-12-05 09:51:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
-2025-12-05 09:51:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 8 ms. Found 0 Reactive Cassandra repository interfaces.
-2025-12-05 09:51:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
-2025-12-05 09:51:40 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 1 ms. Found 0 Cassandra repository interfaces.
-2025-12-05 09:51:40 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
-2025-12-05 09:51:40 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2025-12-05 09:51:40 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
-2025-12-05 09:51:40 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
-2025-12-05 09:51:40 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 920 ms
-2025-12-05 09:51:41 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
-2025-12-05 09:51:41 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
-2025-12-05 09:51:41 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
-2025-12-05 09:51:41 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
-2025-12-05 09:51:41 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
-2025-12-05 09:51:41 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
-2025-12-05 09:51:41 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
-2025-12-05 09:51:41 [s0-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
-2025-12-05 09:51:41 [s0-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
-2025-12-05 09:51:41 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
-2025-12-05 09:51:41 [s1-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
-2025-12-05 09:51:41 [s1-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
-2025-12-05 09:51:42 [s1-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
-2025-12-05 09:51:42 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
-2025-12-05 09:51:42 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
-2025-12-05 09:51:42 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost]
-2025-12-05 09:51:42 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#53e28097:0/SimpleConnection@6b630d4b [delegate=amqp://guest@127.0.0.1:5672/, localPort=65132]
-2025-12-05 09:51:42 [main] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (billing.charge.queue) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
-2025-12-05 09:51:43 [main] INFO  u.u.t.TopupServiceApplication - Started TopupServiceApplication in 3.362 seconds (process running for 3.784)
-2025-12-05 09:51:43 [RMI TCP Connection(2)-26.121.24.245] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-12-05 09:52:18 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Topup request: TopupRequest(p_MSISDN=, p_RECEIPT_NUM=5711450450, p_ACCOUNT=1446811789, p_PAY_AMOUNT=40000, p_PAY_AMOUNT_CURR=40000, p_PAY_CURR=UZS, p_RATE_EXCH=1, p_DATE=Tue Nov 18 23:29:35 UZT 2025, p_DATE2=Tue Nov 18 23:29:35 UZT 2025, p_PAY_TYPE=1, p_WARRANTOR=, p_COMMENT=29539~Saloxiddin.Maxmud~A|1446811789, p_SALE_POINT=2062, p_AGENT_CODE=FO_2062, p_TERMINAL=172.26.0.88, p_ADDINFO3=, p_RESELLER_ID=29539, p_MESSAGE_DATE=Tue Nov 18 23:29:35 UZT 2025, v_EVENT_TIME=Tue Nov 18 23:29:35 UZT 2025, v_REQUEST_TIMEOUT=15, p_PAY_VAT=4285.714286, p_BIS_BALANCE=120005)
-2025-12-05 09:53:36 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Topup request: TopupRequest(p_MSISDN=, p_RECEIPT_NUM=5711450450, p_ACCOUNT=1446811789, p_PAY_AMOUNT=40000, p_PAY_AMOUNT_CURR=40000, p_PAY_CURR=UZS, p_RATE_EXCH=1, p_DATE=Tue Nov 18 23:29:35 UZT 2025, p_DATE2=Tue Nov 18 23:29:35 UZT 2025, p_PAY_TYPE=1, p_WARRANTOR=, p_COMMENT=29539~Saloxiddin.Maxmud~A|1446811789, p_SALE_POINT=2062, p_AGENT_CODE=FO_2062, p_TERMINAL=172.26.0.88, p_ADDINFO3=, p_RESELLER_ID=29539, p_MESSAGE_DATE=Tue Nov 18 23:29:35 UZT 2025, v_EVENT_TIME=Tue Nov 18 23:29:35 UZT 2025, v_REQUEST_TIMEOUT=15, p_PAY_VAT=4285.714286, p_BIS_BALANCE=120005)
+2025-12-11 10:04:42 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 23384 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 10:04:42 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 10:04:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:04:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 10:04:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 10:04:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 86 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 10:04:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:04:43 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 16 ms. Found 4 Cassandra repository interfaces.
+2025-12-11 10:04:43 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 10:04:43 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 10:04:43 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 10:04:43 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 10:04:44 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1103 ms
+2025-12-11 10:04:44 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 10:04:44 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 10:04:44 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 10:04:44 [main] INFO  u.u.topupservice.config.TopupConfig - CBS broker: url=, user=, exchangeType=, exchangeTypeAlt=
+2025-12-11 10:04:44 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 10:04:44 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 10:04:44 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 10:04:45 [s0-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:04:45 [s0-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:04:45 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 10:04:45 [s1-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 10:04:45 [s1-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:04:45 [s1-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:04:46 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-11 10:04:46 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-12-11 10:04:46 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost]
+2025-12-11 10:04:46 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#321b7b9e:0/SimpleConnection@7aef8000 [delegate=amqp://guest@127.0.0.1:5672/, localPort=62183]
+2025-12-11 10:04:46 [main] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (billing.charge.queue) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-12-11 10:04:46 [main] INFO  u.u.t.TopupServiceApplication - Started TopupServiceApplication in 4.245 seconds (process running for 4.664)
+2025-12-11 10:04:47 [RMI TCP Connection(1)-26.121.24.245] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 10:06:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 10:06:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 37000
+2025-12-11 10:06:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810001, id=9c156000-95f2-4a8a-a6a0-31c98cf92696, amount=37000]
+2025-12-11 10:06:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Finished TOPUP for msisdn=998930041717
+2025-12-11 10:07:01 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 10:07:01 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 37000
+2025-12-11 10:07:01 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810001, id=140c969a-0140-458a-b39f-7aa60bb673af, amount=37000]
+2025-12-11 10:07:01 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Finished TOPUP for msisdn=998930041717
+2025-12-11 10:07:23 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 10:07:23 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 37000
+2025-12-11 10:07:23 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810001, id=439d4d1e-925f-4df2-9a5c-09e2355610d2, amount=37000]
+2025-12-11 10:07:23 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Finished TOPUP for msisdn=998930041717
+2025-12-11 10:12:38 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 10:12:38 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Already charged today: msisdn=998930041717, serviceId=125810001
+2025-12-11 10:12:38 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Finished TOPUP for msisdn=998930041717
+2025-12-11 10:38:19 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-12-11 10:38:19 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2025-12-11 10:53:44 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 14768 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 10:53:44 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 10:53:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:53:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 10:53:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 10:53:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 93 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 10:53:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:53:44 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 22 ms. Found 4 Cassandra repository interfaces.
+2025-12-11 10:53:45 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 10:53:45 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 10:53:45 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 10:53:45 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 10:53:45 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 1076 ms
+2025-12-11 10:53:45 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 10:53:45 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 10:53:45 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 10:53:45 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 10:53:45 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 10:53:45 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 10:53:46 [s0-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:53:46 [s0-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:53:46 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 10:53:46 [s1-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 10:53:46 [s1-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:53:46 [s1-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:53:47 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-11 10:53:47 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-12-11 10:53:47 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost]
+2025-12-11 10:53:47 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#6c13019c:0/SimpleConnection@5adc71e7 [delegate=amqp://guest@127.0.0.1:5672/, localPort=50309]
+2025-12-11 10:53:47 [main] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (billing.charge.queue) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-12-11 10:53:47 [main] INFO  u.u.t.TopupServiceApplication - Started TopupServiceApplication in 3.407 seconds (process running for 3.833)
+2025-12-11 10:53:47 [RMI TCP Connection(1)-26.121.24.245] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 10:56:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 10:56:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Process subscription: msisdn=998930041717, serviceId=125810001
+2025-12-11 10:56:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 37000
+2025-12-11 10:56:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810001, id=eb88027e-153d-4fe9-ae1a-499e80c121d0, amount=37000]
+2025-12-11 10:56:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Process subscription: msisdn=998930041717, serviceId=125810002
+2025-12-11 10:56:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 37000
+2025-12-11 10:56:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810002, id=642ffeca-c6bc-4108-94eb-224d8a24f591, amount=37000]
+2025-12-11 10:56:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Finished TOPUP for msisdn=998930041717
+2025-12-11 10:57:16 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-12-11 10:57:17 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.
+2025-12-11 10:57:23 [main] INFO  u.u.t.TopupServiceApplication - Starting TopupServiceApplication using Java 17.0.13 with PID 16232 (C:\Users\pakvi\Desktop\work\work\topup-service\target\classes started by pakvi in C:\Users\pakvi\Desktop\work\work\topup-service)
+2025-12-11 10:57:23 [main] INFO  u.u.t.TopupServiceApplication - No active profile set, falling back to 1 default profile: "default"
+2025-12-11 10:57:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:57:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 4 ms. Found 0 Cassandra repository interfaces.
+2025-12-11 10:57:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Reactive Cassandra repositories in DEFAULT mode.
+2025-12-11 10:57:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 85 ms. Found 0 Reactive Cassandra repository interfaces.
+2025-12-11 10:57:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data Cassandra repositories in DEFAULT mode.
+2025-12-11 10:57:24 [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 14 ms. Found 4 Cassandra repository interfaces.
+2025-12-11 10:57:24 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port 8080 (http)
+2025-12-11 10:57:24 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2025-12-11 10:57:24 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/10.1.20]
+2025-12-11 10:57:24 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2025-12-11 10:57:24 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 989 ms
+2025-12-11 10:57:25 [main] INFO  u.u.topupservice.config.TopupConfig - ==== Topup service configuration ====
+2025-12-11 10:57:25 [main] INFO  u.u.topupservice.config.TopupConfig - Cassandra: contactPoints=127.0.0.1, port=9042, username=cassandra, keyspace=vasp, dc=datacenter1
+2025-12-11 10:57:25 [main] INFO  u.u.topupservice.config.TopupConfig - RabbitMQ: host=localhost, port=5672, username=guest, exchange=exchange, queueTermination=billing.charge.queue, routingKeyTermination=billing.charge.queue
+2025-12-11 10:57:25 [main] INFO  c.d.o.d.i.c.DefaultMavenCoordinates - DataStax Java driver for Apache Cassandra(R) (com.datastax.oss:java-driver-core) version 4.17.0
+2025-12-11 10:57:25 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 10:57:25 [s0-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 10:57:25 [s0-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:57:25 [s0-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:57:25 [main] INFO  c.d.o.d.i.c.c.CqlPrepareAsyncProcessor - Adding handler to invalidate cached prepared statements on type changes
+2025-12-11 10:57:25 [s1-admin-0] INFO  c.d.o.d.internal.core.time.Clock - Using native clock for microsecond precision
+2025-12-11 10:57:25 [s1-io-2] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:57:25 [s1-io-3] WARN  c.d.o.d.a.c.a.PlainTextAuthProviderBase - [] 127.0.0.1/<unresolved>:9042 did not send an authentication challenge; This is suspicious because the driver expects authentication
+2025-12-11 10:57:26 [main] INFO  o.s.b.a.e.web.EndpointLinksResolver - Exposing 3 endpoint(s) beneath base path '/actuator'
+2025-12-11 10:57:26 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port 8080 (http) with context path ''
+2025-12-11 10:57:26 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Attempting to connect to: [localhost]
+2025-12-11 10:57:26 [main] INFO  o.s.a.r.c.CachingConnectionFactory - Created new connection: connectionFactory#3835b281:0/SimpleConnection@7eea934d [delegate=amqp://guest@127.0.0.1:5672/, localPort=64497]
+2025-12-11 10:57:26 [main] INFO  o.s.amqp.rabbit.core.RabbitAdmin - Auto-declaring a non-durable, auto-delete, or exclusive Queue (billing.charge.queue) durable:false, auto-delete:true, exclusive:false. It will be redeclared if the broker stops and is restarted while the connection factory is alive, but all messages will be lost.
+2025-12-11 10:57:26 [main] INFO  u.u.t.TopupServiceApplication - Started TopupServiceApplication in 3.094 seconds (process running for 3.491)
+2025-12-11 10:57:26 [RMI TCP Connection(3)-26.121.24.245] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-12-11 10:57:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 10:57:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Process subscription: msisdn=998930041717, serviceId=125810001
+2025-12-11 10:57:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 37000
+2025-12-11 10:57:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810001, id=2f4a98e9-1aee-44fc-9486-81b24d657722, amount=37000]
+2025-12-11 10:57:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Process subscription: msisdn=998930041717, serviceId=125810002
+2025-12-11 10:57:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 100
+2025-12-11 10:57:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810002, id=6272643a-3a49-4aa9-bca3-5b0e019170aa, amount=100]
+2025-12-11 10:57:30 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Finished TOPUP for msisdn=998930041717
+2025-12-11 11:23:45 [Thread-15] INFO  o.s.j.c.CachingConnectionFactory - Encountered a JMSException - resetting the underlying JMS Connection
+jakarta.jms.JMSException: ActiveMQNotConnectedException[errorType=NOT_CONNECTED message=AMQ219006: Channel disconnected]
+	at org.apache.activemq.artemis.jms.client.ActiveMQConnection$JMSFailureListener.connectionFailed(ActiveMQConnection.java:714)
+	at org.apache.activemq.artemis.jms.client.ActiveMQConnection$JMSFailureListener.connectionFailed(ActiveMQConnection.java:735)
+	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.callSessionFailureListeners(ClientSessionFactoryImpl.java:868)
+	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.failoverOrReconnect(ClientSessionFactoryImpl.java:794)
+	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.handleConnectionFailure(ClientSessionFactoryImpl.java:566)
+	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.handleConnectionFailure(ClientSessionFactoryImpl.java:559)
+	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl$1.run(ClientSessionFactoryImpl.java:417)
+	at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:57)
+	at org.apache.activemq.artemis.utils.actors.OrderedExecutor.doTask(OrderedExecutor.java:32)
+	at org.apache.activemq.artemis.utils.actors.ProcessorBase.executePendingTasks(ProcessorBase.java:68)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at org.apache.activemq.artemis.utils.ActiveMQThreadFactory$1.run(ActiveMQThreadFactory.java:118)
+Caused by: org.apache.activemq.artemis.api.core.ActiveMQNotConnectedException: AMQ219006: Channel disconnected
+	at org.apache.activemq.artemis.core.client.impl.ClientSessionFactoryImpl.connectionDestroyed(ClientSessionFactoryImpl.java:410)
+	at org.apache.activemq.artemis.core.remoting.impl.netty.NettyConnector$Listener$1.run(NettyConnector.java:1240)
+	... 6 common frames omitted
+2025-12-11 11:25:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Start TOPUP for msisdn=998930041717 request=TopupRequest(msisdn=998930041717, receiptNum=5711450450, account=1446811789, payAmount=40000, payAmountCurr=40000, payCurr=UZS, rateExch=1, date=null, date2=null, payType=1, warrantor=, comment=29539~Saloxiddin.Maxmud~A|1446811789, salePoint=2062, agentCode=FO_2062, terminal=172.26.0.88, addinfo3=, resellerId=29539, messageDate=null, eventTime=null, requestTimeout=15, payVat=4285.714286, bisBalance=120005)
+2025-12-11 11:25:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Process subscription: msisdn=998930041717, serviceId=125810001
+2025-12-11 11:25:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 37000
+2025-12-11 11:25:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810001, id=2c412221-1c52-4f2f-9bd2-bf6beca4f853, amount=37000]
+2025-12-11 11:25:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Process subscription: msisdn=998930041717, serviceId=125810002
+2025-12-11 11:25:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Amount cp 100
+2025-12-11 11:25:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Prolongation request: ProlongationRequest[msisdn=998930041717, serviceId=125810002, id=e9ddb2c4-1383-4ef4-b032-c19b3022240e, amount=100]
+2025-12-11 11:25:29 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-1] INFO  u.u.t.service.Impl.TopupServiceImpl - Finished TOPUP for msisdn=998930041717
+2025-12-11 14:53:03 [RMI TCP Accept-0] WARN  sun.rmi.transport.tcp - RMI TCP Accept-0: accept loop for ServerSocket[addr=0.0.0.0/0.0.0.0,localport=64485] throws
+java.io.IOException: The server sockets created using the LocalRMIServerSocketFactory only accept connections from clients running on the host where the RMI remote objects have been exported.
+	at jdk.management.agent/sun.management.jmxremote.LocalRMIServerSocketFactory$1.accept(LocalRMIServerSocketFactory.java:114)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.executeAcceptLoop(TCPTransport.java:413)
+	at java.rmi/sun.rmi.transport.tcp.TCPTransport$AcceptLoop.run(TCPTransport.java:377)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+2025-12-11 15:20:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Waiting for workers to finish.
+2025-12-11 15:20:02 [org.springframework.amqp.rabbit.RabbitListenerEndpointContainer#0-2] INFO  o.s.a.r.l.SimpleMessageListenerContainer - Successfully waited for workers to finish.

@@ -36,6 +36,7 @@
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
         </dependency>
+
         <dependency>
             <groupId>jakarta.annotation</groupId>
             <artifactId>jakarta.annotation-api</artifactId>
@@ -69,9 +70,13 @@
             <artifactId>micrometer-registry-prometheus</artifactId>
         </dependency>
         <dependency>
-            <groupId>uz.cbssolutions</groupId>
-            <artifactId>broker</artifactId>
-            <version>1.8.10</version>
+            <groupId>org.messaginghub</groupId>
+            <artifactId>pooled-jms</artifactId>
+            <version>3.1.5</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-artemis</artifactId>
         </dependency>
         <dependency>
             <groupId>uz.cbssolutions.commons.broker</groupId>
@@ -97,19 +102,19 @@
             <scope>provided</scope>
         </dependency>
     </dependencies>
-<!--    <repositories>-->
-<!--        <repository>-->
-<!--            <id>nexus</id>-->
-<!--            <name>Nexus Repository</name>-->
-<!--            <url>https://ucell-registry.local.domain/repository/maven-public/</url>-->
-<!--            <snapshots>-->
-<!--                <enabled>true</enabled>-->
-<!--            </snapshots>-->
-<!--            <releases>-->
-<!--                <enabled>true</enabled>-->
-<!--            </releases>-->
-<!--        </repository>-->
-<!--    </repositories>-->
+    <repositories>
+        <repository>
+            <id>nexus</id>
+            <name>Nexus Repository</name>
+            <url>https://ucell-registry.local.domain/repository/maven-public/</url>
+            <snapshots>
+                <enabled>true</enabled>
+            </snapshots>
+            <releases>
+                <enabled>true</enabled>
+            </releases>
+        </repository>
+    </repositories>
     <build>
         <plugins>
             <plugin>

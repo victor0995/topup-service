@@ -5,6 +5,9 @@ import uz.ucell.topupservice.model.UserProlongation;
 
 import java.util.List;
 
-public interface UserProlongationRepository extends CassandraRepository<UserProlongation, Long> {
-    List<UserProlongation> findByServiceId(Long serviceId);
+public interface UserProlongationRepository extends CassandraRepository<UserProlongation, String> {
+
+    List<UserProlongation> findByMsisdn(String msisdn);
+
+    List<UserProlongation> findByMsisdnAndServiceId(String msisdn, Long serviceId);
 }

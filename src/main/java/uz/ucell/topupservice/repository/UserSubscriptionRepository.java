@@ -10,6 +10,5 @@ import java.util.List;
 public interface UserSubscriptionRepository extends CassandraRepository<UserSubscription, String> {
 
     List<UserSubscription> findByMsisdn(String msisdn);
-    List<UserSubscription> findAllByCpId(String cpId);
-    void deleteByMsisdn(String msisdn);
+
 }

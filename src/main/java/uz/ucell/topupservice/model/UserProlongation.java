@@ -8,11 +8,12 @@ import org.springframework.data.cassandra.core.mapping.PrimaryKeyColumn;
 import org.springframework.data.cassandra.core.mapping.Table;
 
 import java.io.Serializable;
+import java.time.Instant;
 import java.time.LocalDateTime;
 
-@RequiredArgsConstructor
-@Getter
-@Setter
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @Table("user_prolongation")
 public class UserProlongation implements Serializable {
@@ -24,6 +25,6 @@ public class UserProlongation implements Serializable {
     Long serviceId;
 
     @Column("created_date")
-    LocalDateTime createdDate;
+    Instant createdDate;
 
 }

@@ -27,7 +27,6 @@ public class JmsConfiguration {
     @Primary
     public JmsTemplate myJmsTemplate(ConnectionFactory connectionFactory) {
         JmsTemplate jmsTemplate = new JmsTemplate(connectionFactory);
-
         jmsTemplate.setDeliveryPersistent(true);
         jmsTemplate.setSessionTransacted(false);
 

@@ -11,4 +11,5 @@ import java.util.UUID;
 @Repository
 public interface UserMessagesRepository extends CassandraRepository<UserMessage, UUID> {
 
+    UserMessage findAllByRequestId(UUID id);
 }

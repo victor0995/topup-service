@@ -10,7 +10,5 @@ public interface UserProlongationRepository extends CassandraRepository<UserProl
 
     List<UserProlongation> findByMsisdn(String msisdn);
 
-
-
     Optional<UserProlongation> findByMsisdnAndServiceId(String msisdn, Long serviceId);
 }

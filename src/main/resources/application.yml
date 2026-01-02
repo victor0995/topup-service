@@ -16,14 +16,16 @@ spring:
     allow-bean-definition-overriding: true
   application:
     name: topup
-RABBITMQ_HOST: localhost
-RABBITMQ_PORT: 5672
-RABBITMQ_USERNAME: guest
-RABBITMQ_PASSWORD: guest
-RABBITMQ_EXCHANGE_NAME: exchange
-RABBITMQ_QUEUE_TOPUP: billing.charge.queue
-RABBITMQ_ROUTING_KEY_TOPUP: billing.charge.queue
-RABBITMQ_VIRTUAL_HOST: /
+rabbitmq:
+  host: localhost
+  port: 5672
+  username: 5672
+  password: guest
+  listener: topup-req
+  exchange-name: ${RABBITMQ_EXCHANGE_NAME:exchange}
+  queue: ${RABBITMQ_QUEUE_TOPUP:billing.charge.queue}
+  routing-key: ${RABBITMQ_ROUTING_KEY_TOPUP:billing.charge.queue}
+  virtual-host: ${RABBITMQ_VIRTUAL_HOST:/}
 logging:
   file.name: logs/topup.log
   pattern:

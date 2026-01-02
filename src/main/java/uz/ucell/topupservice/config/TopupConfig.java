@@ -5,7 +5,6 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import uz.ucell.topupservice.cassandra.CassandraProperties;
-import uz.ucell.topupservice.mq.RabbitMQProperties;
 
 
 @Slf4j
@@ -33,8 +32,8 @@ public class TopupConfig {
                 rabbitMQProperties.getPort(),
                 rabbitMQProperties.getUsername(),
                 rabbitMQProperties.getExchangeName(),
-                rabbitMQProperties.getQueueTopup(),
-                rabbitMQProperties.getRoutingKeyTopup()
+                rabbitMQProperties.getQueue(),
+                rabbitMQProperties.getRoutingKey()
         );
         log.debug("RabbitMQ password: {}", mask(rabbitMQProperties.getPassword()));
     }

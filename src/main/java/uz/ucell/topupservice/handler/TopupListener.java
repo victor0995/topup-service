@@ -1,4 +1,4 @@
-package uz.ucell.topupservice.mq.listener;
+package uz.ucell.topupservice.handler;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import lombok.AccessLevel;
@@ -22,7 +22,7 @@ public class TopupListener {
     TopupService topupService;
     ObjectMapper objectMapper;
 
-    @RabbitListener(queues = "${RABBITMQ_QUEUE_TOPUP}")
+    @RabbitListener(id = "${rabbitmq.listener}" ,queues = "${rabbitmq.queue}")
     public void setTopupService(TopupRequest request) {
         topupService.topup(request);
     }

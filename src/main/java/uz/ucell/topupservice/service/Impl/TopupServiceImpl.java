@@ -10,6 +10,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.stereotype.Service;
 import uz.ucell.topupservice.dto.TopupRequest;
+import uz.ucell.topupservice.exception.TopupHandleException;
 import uz.ucell.topupservice.model.*;
 import uz.ucell.topupservice.repository.CpRepository;
 import uz.ucell.topupservice.repository.UserMessagesRepository;
@@ -21,10 +22,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.ZoneId;
-import java.util.List;
-import java.util.Map;
-import java.util.Optional;
-import java.util.UUID;
+import java.util.*;
 import java.util.stream.Collectors;
 
 
@@ -42,43 +40,24 @@ public class TopupServiceImpl implements uz.ucell.topupservice.service.TopupServ
     private final QuietTimeService quietTimeService;
     static final ZoneId TASHKENT_ZONE = ZoneId.of("Asia/Tashkent");
 
-
     @Override
     public void topup(TopupRequest request) {
-
-        if (request.getMsisdn() == null) {
-            log.info("Topup request without msisdn: {}", request);
-            return;
-        }
-        log.info("Start TOPUP for msisdn={} request={}", request.getMsisdn(), request);
-
-        if (quietTimeService.isQuietTime()) {
-            log.info("Skip topup for msisdn={} (23:00-04:00)", request.getMsisdn());
-            return;
-        }
-
+        if(!validateSession(request.getMsisdn())) return;
         LocalDate today = LocalDate.now(TASHKENT_ZONE);
 
-        List<UserSubscription> subscriptions = userSubscriptionRepository.findByMsisdn(request.getMsisdn());
-        if (subscriptions.isEmpty()) {
-            log.info("No subscriptions for msisdn={}", request.getMsisdn());
-            return;
-        }
-
-        List<UserSubscription> activeSubs = subscriptions.stream()
+        List<UserSubscription> subscriptions = userSubscriptionRepository.findByMsisdn(request.getMsisdn())
+                .stream()
                 .filter(sub -> sub.getTypeId() != null && ( sub.getTypeId() == 1 || sub.getTypeId() == 11))
                 .toList();
-
-        if (activeSubs.isEmpty()) {
-            log.info("No ACTIVE subscriptions for msisdn={}", request.getMsisdn());
+        if (subscriptions.isEmpty()) {
+            log.info("No subscriptions for msisdn={}", request.getMsisdn());
             return;
         }
 
         List<UserProlongation> prolongations = userProlongationRepository.findByMsisdn(request.getMsisdn());
         log.info("Total prolongations={}", prolongations);
 
-        for (UserSubscription sub : activeSubs) {
-
+        for (UserSubscription sub : subscriptions) {
             Long serviceId = sub.getServiceId();
             log.info("serviceId={}", serviceId);
             if (serviceId == null) {
@@ -105,23 +84,20 @@ public class TopupServiceImpl implements uz.ucell.topupservice.service.TopupServ
                 }
             }
 
-            String cpId = sub.getCpId();
-            String actionId = sub.getActionId();
-
             ContentProvider cp = cpRepository
-                    .findByShortNumberAndActionId(cpId, actionId)
+                    .findByShortNumberAndActionId(sub.getCpId(), sub.getActionId())
                     .orElse(null);
 
             if (cp == null) {
                 log.warn("ContentProvider not found for msisdn={}, cpId={}, actionId={}",
-                        request.getMsisdn(), cpId, actionId);
+                        request.getMsisdn(), sub.getCpId(), sub.getActionId());
                 continue;
             }
 
             Long amount = cp.getAmount();
             if (amount == null || amount <= 0) {
                 log.warn("Invalid amount={} for msisdn={}, serviceId={}, cpId={}, actionId={}",
-                        amount, request.getMsisdn(), serviceId, cpId, actionId);
+                        amount, request.getMsisdn(), serviceId, sub.getCpId(), sub.getActionId());
                 continue;
             }
             log.info("Amount cp {}", amount);
@@ -136,10 +112,9 @@ public class TopupServiceImpl implements uz.ucell.topupservice.service.TopupServ
                 userMessagesRepository.save(new UserMessage(prolongationRequest.id(), cp.getShortNumber(), request.getMsisdn(), serviceId,0, Instant.now()));
                 jmsTemplate.convertAndSend("topup-req", objectMapper.writeValueAsString(prolongationRequest));
             } catch (Exception e) {
-                throw new RuntimeException(e);
+                throw new TopupHandleException(request, e.getLocalizedMessage());
             }
         }
-
         log.info("Finished TOPUP for msisdn={}", request.getMsisdn());
     }
 
@@ -163,6 +138,13 @@ public class TopupServiceImpl implements uz.ucell.topupservice.service.TopupServ
         }
     }
 
+    private boolean validateSession(String msisdn){
+        if (Objects.isNull(msisdn) || msisdn.isEmpty() || quietTimeService.isQuietTime()) {
+            log.info("Topup request without msisdn: {}", msisdn);
+            return false;
+        }
+        else return true;
+    }
 
 }
 

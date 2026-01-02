@@ -17,9 +17,7 @@ public class JmsConfiguration {
     public DefaultJmsListenerContainerFactory jmsListenerContainerFactory(ConnectionFactory connectionFactory) {
         DefaultJmsListenerContainerFactory factory = new DefaultJmsListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
-        factory.setConcurrency("5-10");
         factory.setSessionTransacted(false);
-
         return factory;
     }
 
@@ -29,7 +27,6 @@ public class JmsConfiguration {
         JmsTemplate jmsTemplate = new JmsTemplate(connectionFactory);
         jmsTemplate.setDeliveryPersistent(true);
         jmsTemplate.setSessionTransacted(false);
-
         return jmsTemplate;
     }
 }

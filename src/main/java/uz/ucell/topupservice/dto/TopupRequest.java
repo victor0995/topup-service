@@ -20,6 +20,7 @@ TODO конвертеры напиши вместо int используй кл�
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 @FieldDefaults(level = AccessLevel.PRIVATE)
 public class TopupRequest implements Serializable {
 

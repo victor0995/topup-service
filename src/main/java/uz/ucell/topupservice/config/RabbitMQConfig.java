@@ -1,8 +1,9 @@
-package uz.ucell.topupservice.mq;
+package uz.ucell.topupservice.config;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.amqp.core.*;
+import org.springframework.amqp.rabbit.config.SimpleRabbitListenerContainerFactory;
 import org.springframework.amqp.rabbit.connection.CachingConnectionFactory;
 import org.springframework.amqp.rabbit.connection.ConnectionFactory;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
@@ -19,7 +20,7 @@ public class RabbitMQConfig {
 
     @Bean
     public Queue topupService() {
-        return new Queue(properties.getQueueTopup(), false, false, true);
+        return new Queue(properties.getQueue(), false, false, true);
     }
 
     @Bean
@@ -32,7 +33,7 @@ public class RabbitMQConfig {
         return BindingBuilder
                 .bind(topupService())
                 .to(exchange())
-                .with(properties.getRoutingKeyTopup());
+                .with(properties.getRoutingKey());
     }
 
     @Bean
@@ -51,7 +52,7 @@ public class RabbitMQConfig {
     @Bean
     public ConnectionFactory connectionFactory() {
         CachingConnectionFactory connectionFactory = new CachingConnectionFactory();
-        connectionFactory.setVirtualHost(properties.getVirtualhost());
+        connectionFactory.setVirtualHost(properties.getVirtualHost());
         connectionFactory.setAddresses(properties.getHost());
         connectionFactory.setPort(Integer.parseInt(properties.getPort()));
         connectionFactory.setUsername(properties.getUsername());
@@ -59,5 +60,14 @@ public class RabbitMQConfig {
         return connectionFactory;
     }
 
-
+    @Bean
+    public SimpleRabbitListenerContainerFactory rabbitListenerContainerFactory(ConnectionFactory connectionFactory) {
+        SimpleRabbitListenerContainerFactory factory = new SimpleRabbitListenerContainerFactory();
+        factory.setConnectionFactory(connectionFactory);
+        factory.setMessageConverter(messageConverter());
+        factory.setAutoStartup(true);
+        factory.setConcurrentConsumers(3);
+        factory.setMaxConcurrentConsumers(10);
+        return factory;
+    }
 }
